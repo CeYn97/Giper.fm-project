@@ -6,7 +6,7 @@ import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
 import { supabaseClient } from "./Providers/suparbaseClient";
 import { dataProvider } from "@refinedev/supabase";
 import authProvider from "./Providers/authProvider";
-import { liveProvider } from "@refinedev/supabase";
+// import { liveProvider } from "@refinedev/supabase";
 import { useNotificationProvider } from "@refinedev/antd";
 
 import { ConfigProvider, App as AntdApp } from "antd";
@@ -26,7 +26,7 @@ export default function App() {
       <ConfigProvider>
         <AntdApp>
           <Refine
-            liveProvider={liveProvider(supabaseClient)}
+            // liveProvider={liveProvider(supabaseClient)}
             dataProvider={dataProvider(supabaseClient)}
             authProvider={authProvider}
             routerProvider={routerProvider}

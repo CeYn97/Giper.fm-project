@@ -7,6 +7,7 @@ import { useCreate } from "@refinedev/core";
 export const ProductList = () => {
   const { listProps } = useSimpleList();
   const { data: account } = useGetIdentity();
+
   const { mutate } = useCreate();
 
   const hasEnoughPoints = (price) => {

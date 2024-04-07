@@ -7,10 +7,9 @@ import {
 } from "@refinedev/antd";
 
 import { Table, Space, Input, Select } from "antd";
-import { DataField } from "@refinedev/antd";
 
 export const ListOrders = () => {
-  const { tableProps, sorter, filters } = useTable({
+  const { tableProps, sorters, filters } = useTable({
     sorters: { initial: [{ field: "id", order: "asc" }] },
     filters: {
       initial: [],
@@ -30,13 +29,13 @@ export const ListOrders = () => {
           dataIndex="id"
           title="ID"
           sorter
-          defaultSortOrder={getDefaultSortOrder("id", sorter)}
+          defaultSortOrder={getDefaultSortOrder("id", sorters)}
         />
         <Table.Column
           dataIndex={["products", "title"]}
           title="Название"
           sorter
-          defaultSortOrder={getDefaultSortOrder("name", sorter)}
+          defaultSortOrder={getDefaultSortOrder("name", sorters)}
           filterDropdown={(props) => (
             <FilterDropdown {...props}>
               <Input />
@@ -47,7 +46,7 @@ export const ListOrders = () => {
           dataIndex={["Employees", "last_name"]}
           title="Фамилия сотрудника"
           sorter
-          defaultSortOrder={getDefaultSortOrder("last_name", sorter)}
+          defaultSortOrder={getDefaultSortOrder("last_name", sorters)}
           filterDropdown={(props) => (
             <FilterDropdown {...props}>
               <Input />
