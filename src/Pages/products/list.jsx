@@ -2,12 +2,12 @@ import { useSimpleList, CreateButton } from "@refinedev/antd";
 import { Flex, Card } from "antd";
 import { List } from "@refinedev/antd";
 import { useGetIdentity } from "@refinedev/core";
+import { useCreate } from "@refinedev/core";
 
 export const ProductList = () => {
   const { listProps } = useSimpleList();
   const { data: account } = useGetIdentity();
-
-  console.log(account);
+  const { mutate } = useCreate();
 
   const hasEnoughPoints = (price) => {
     return price <= account?.userInfo?.points;
@@ -27,6 +27,15 @@ export const ProductList = () => {
                   icon={false}
                   disabled={
                     product.quantity === 0 || !hasEnoughPoints(product.price)
+                  }
+                  onClick={() =>
+                    mutate({
+                      resource: "orders",
+                      values: {
+                        employee_id: account?.userInfo.id,
+                        product_id: product.id,
+                      },
+                    })
                   }
                 >
                   Купить

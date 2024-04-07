@@ -6,13 +6,15 @@ import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
 import { supabaseClient } from "./Providers/suparbaseClient";
 import { dataProvider } from "@refinedev/supabase";
 import authProvider from "./Providers/authProvider";
+import { liveProvider } from "@refinedev/supabase";
+import { useNotificationProvider } from "@refinedev/antd";
 
 import { ConfigProvider, App as AntdApp } from "antd";
 import { ThemedLayoutV2, ThemedTitleV2 } from "@refinedev/antd";
 
 import { Employees } from "./Pages/employess/list";
 import { ShowEmployee } from "./Pages/employess/show";
-
+import { ListOrders } from "./Pages/orders/list";
 import { Login } from "./Pages/Login";
 
 import "antd/dist/reset.css";
@@ -24,9 +26,11 @@ export default function App() {
       <ConfigProvider>
         <AntdApp>
           <Refine
+            liveProvider={liveProvider(supabaseClient)}
             dataProvider={dataProvider(supabaseClient)}
             authProvider={authProvider}
             routerProvider={routerProvider}
+            notificationProvider={useNotificationProvider}
             resources={[
               {
                 name: "Employees",
@@ -38,9 +42,18 @@ export default function App() {
                 name: "products",
                 list: "/products",
                 show: "/products/:id",
-                meta: { label: "Мерч" },
+                meta: { label: "Продукты" },
+              },
+              {
+                name: "orders",
+                list: "/orders",
+                meta: { label: "Заказы" },
               },
             ]}
+            options={{ liveMode: "auto" }}
+            onLiveEvent={(event) => {
+              console.log(event);
+            }}
           >
             <Routes>
               <Route
@@ -68,6 +81,9 @@ export default function App() {
                 <Route path="/products">
                   <Route index element={<ProductList />} />
                   {/* <Route path=":id" element={<ShowEmployee />} /> */}
+                </Route>
+                <Route path="/orders">
+                  <Route index element={<ListOrders />} />
                 </Route>
               </Route>
               <Route
