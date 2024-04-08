@@ -11,7 +11,7 @@
 - Магазинер София (Front-end, Creative manager)
 - Сорокина Алина (Designer)
 
-###  
+### Второстепенное участие
 - Матвеев Егор (Creative manager)
 
 ###  
