@@ -27,7 +27,7 @@
 - "npm run dev"
 
 ### Продакшен
-- https://giperfm.netlify.app/login?to=%2F
+- https://giperfm.netlify.app/
 
 ## План работы
 
