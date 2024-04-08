@@ -9,7 +9,8 @@
 }
 
 .ant-typography {
-  color: black !important;
+  color: #ffffff !important;
+  font-size: 35px !important;
 }
 
 .ant-card {
@@ -38,7 +39,7 @@
 }
 
 .ant-card-bordered {
-  max-width: 45vw !important;
+  max-width: 60vw !important;
 }
 
 .ant-menu-title-content {
@@ -112,7 +113,7 @@
 /* ----- */
 
 .ant-layout-content {
-  max-width: 1020px;
+  max-width: 1200px;
   margin: 0 auto;
   width: 80vw;
 }
@@ -168,19 +169,21 @@
 }
 
 .container {
-  margin: 20px auto 30px;
-  max-width: 1020px;
+  margin: 20px auto 60px;
+  max-width: 1200px;
   width: 80vw;
   padding: 0px 16px;
+  border-radius: 8px;
 }
 
 .layout-header {
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   gap: 16px;
-  padding: 16px 0px;
+  padding: 8px 16px;
 }
 
 @media screen and (max-width: 600px) {
@@ -208,14 +211,16 @@ li {
   font-weight: bold;
   color: #96969e;
   transition: all 0.3s;
+  gap: 8px;
+  color: black;
 }
 
 .nav-button:hover {
-  color: #3ecf8e;
+  color: #E7FF00
 }
 
 .nav-button:hover .dot-icon {
-  background-color: #3ecf8e;
+  background-color: #E7FF00;
 }
 
 .nav-button.active {
@@ -223,7 +228,7 @@ li {
 }
 
 .nav-button.active .dot-icon {
-  background-color: #3ecf8e;
+  background-color: #E7FF00;
 }
 
 .spin-wrapper {
@@ -234,7 +239,7 @@ li {
 }
 
 ::selection {
-  background-color: #3ecf8e;
+  background-color: #E7FF00;
   color: #fff;
 }
 .nav-button {
