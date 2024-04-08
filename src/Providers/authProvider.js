@@ -208,7 +208,6 @@ const authProvider = {
   },
   getIdentity: async () => {
     const { data } = await supabaseClient.auth.getUser();
-    console.log(data);
 
     if (data?.user) {
       const { data: userInfo } = await supabaseClient
