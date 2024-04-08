@@ -1,0 +1,110 @@
+@import url('https://fonts.google.com/share?selection.family=Open+Sans:ital,wght@0,300..800;1,300..800');
+
+
+
+.ant-typography{
+    color: #000000 !important;
+    font-family: "OpenSans" !important;
+
+}
+.ant-page-header-heading{
+    color:azure !important;
+}
+.ant-btn-icon{
+    background-color: #E7FF00 !important;
+}
+.ant-btn{
+    background-color: #E7FF00!important;
+}
+.ant-menu-title-content{
+    background-color: #E7FF00  !important;
+}
+.ant-btn-icon{
+    color: black !important;
+}
+.ant-menu-item{
+    background-color: #E7FF00 !important;
+    border-bottom: 50% !important;
+    border: 1px solid #000000 !important; 
+}
+.ant-menu-root{
+    background-color:  grey !important;
+    opacity: 1;
+}
+.ant-layout {
+    background-image: url(./Pages/images/slide1.png) !important;
+    ;
+}
+.ant-menu{
+    background-color:  black !important;
+    opacity: 1;;
+}
+.ant-table-cell{
+    background-color:  whitesmoke !important;
+    border-color: black !important;
+    opacity: 0,5 !important;
+}
+.ant-menu-title-content {
+   
+    font-family: "OpenSans" !important;
+    font-weight: bold;
+    font-size: 15px;
+  }
+.ant-layout-sider-dark{
+    background-color: #000000 !important;
+}
+.ant-pagination-item{
+    background-color: #E7FF00 !important;
+}
+.ant-table{
+    border-bottom: 50% !important;
+    border: 1px solid #000000 !important; 
+}
+.ant-layout > div > div > div:first-of-type {
+    display: none !important;
+}
+.ant-menu-title-content {
+    font-family: "OpenSans" !important;
+}
+.ant-space-item {
+
+    font-family: "OpenSans" !important;
+    font-weight: bold;
+    font-size: 20px;
+}
+.ant-pagination-item-link{
+    background-color: #000000 !important;
+}
+.ant-btn{
+    background-color:  #E7FF00;
+    ;
+}
+.ant-checkbox-wrapper{
+    color: #000000 ;
+}
+.ant-card{
+    background-color: whitesmoke !important;
+    opacity: 1;
+}
+.ant-input{
+    background-color: whitesmoke !important;
+    opacity: 1;
+}
+.ant-input-outlined{
+    border-color: #000000 !important;
+}
+.ant-btn{
+    color:black !important;
+}
+.ant-card{
+    max-width: 45vw !important;
+}
+.ant-space-item{
+    color:#000000 !important
+}
+.ant-pagination-item-link{
+    color: #E7FF00 !important;
+}
+.anticon-unordered-list{
+    
+}

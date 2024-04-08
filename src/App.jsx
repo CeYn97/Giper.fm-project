@@ -6,7 +6,7 @@ import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
 import { supabaseClient } from "./Providers/suparbaseClient";
 import { dataProvider } from "@refinedev/supabase";
 import authProvider from "./Providers/authProvider";
-import { liveProvider } from "@refinedev/supabase";
+// import { liveProvider } from "@refinedev/supabase";
 import { useNotificationProvider } from "@refinedev/antd";
 
 import { ConfigProvider, App as AntdApp } from "antd";
@@ -20,13 +20,17 @@ import { Login } from "./Pages/Login";
 import "antd/dist/reset.css";
 import { ProductList } from "./Pages/products/list";
 
+import korzinaIcon from './assets/korzina.svg'
+import podarokIcon from './assets/podarok.svg'
+import sotrudIcon from './assets/sotrud.svg'
+
 export default function App() {
   return (
     <BrowserRouter>
       <ConfigProvider>
         <AntdApp>
           <Refine
-            liveProvider={liveProvider(supabaseClient)}
+            // liveProvider={liveProvider(supabaseClient)}
             dataProvider={dataProvider(supabaseClient)}
             authProvider={authProvider}
             routerProvider={routerProvider}
@@ -36,18 +40,20 @@ export default function App() {
                 name: "Employees",
                 list: "/Employess",
                 show: "/Employess/:id",
-                meta: { label: "Сотрудники" },
+                meta: { label: "Сотрудники", icon: <img src={sotrudIcon}
+                style={{height:16}}/> },
               },
               {
                 name: "products",
                 list: "/products",
                 show: "/products/:id",
-                meta: { label: "Продукты" },
+                meta: { label: "Продукты", icon: <img src={korzinaIcon} style={{ height: 16 }} /> },
               },
               {
                 name: "orders",
                 list: "/orders",
-                meta: { label: "Заказы" },
+                meta: { label: "Заказы" , icon: <img src={podarokIcon}
+                style={{ height: 16}}/>},
               },
             ]}
             options={{ liveMode: "auto" }}

@@ -9,7 +9,7 @@ import {
 import { Table, Space, Input, Select } from "antd";
 
 export const Employees = () => {
-  const { tableProps, sorter, filters } = useTable({
+  const { tableProps, sorters, filters } = useTable({
     sorters: { initial: [{ field: "id", order: "asc" }] },
     filters: {
       initial: [],
@@ -24,13 +24,13 @@ export const Employees = () => {
           dataIndex="id"
           title="ID"
           sorter
-          defaultSortOrder={getDefaultSortOrder("id", sorter)}
+          defaultSortOrder={getDefaultSortOrder("id", sorters)}
         />
         <Table.Column
           dataIndex="name"
           title="Имя"
           sorter
-          defaultSortOrder={getDefaultSortOrder("name", sorter)}
+          defaultSortOrder={getDefaultSortOrder("name", sorters)}
           filterDropdown={(props) => (
             <FilterDropdown {...props}>
               <Input />
@@ -41,7 +41,7 @@ export const Employees = () => {
           dataIndex="last_name"
           title="Фамилия"
           sorter
-          defaultSortOrder={getDefaultSortOrder("last_name", sorter)}
+          defaultSortOrder={getDefaultSortOrder("last_name", sorters)}
           filterDropdown={(props) => (
             <FilterDropdown {...props}>
               <Input />
