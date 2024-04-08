@@ -1,8 +1,29 @@
-# React + Vite
+# ITday Hakaton с giper.fm
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Команда "Пример":
+-Имя Фамилия (Роль)
 
-Currently, two official plugins are available:
+## Инструкция по запуску
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Локальное окружение
+
+Что бы проверить работоспособность приложения в лакольном окружение, выполните следующие действия:
+- "npm i"
+- "npm run dev"
+
+### Продакшен
+- https://giperfm.netlify.app/login?to=%2F
+
+## План работы
+  
+### Реализованный функционал
+- лялял
+- ляляля
+- лляля
+  
+### Задача в работе
+- лялял
+- ляляля
+- лляля
+
+
