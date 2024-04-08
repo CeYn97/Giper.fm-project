@@ -11,6 +11,7 @@ import { Link } from "react-router-dom";
 
 import { LogoutOutlined, LoginOutlined } from "@ant-design/icons";
 import { Button, Image, Space } from "antd";
+import logo2 from "../assets/logo2.svg";
 
 export const Layout = ({ children }) => {
   // const { data } = useIsAuthenticated();
@@ -23,21 +24,22 @@ export const Layout = ({ children }) => {
     <AntdLayout
       style={{
         minHeight: "100vh",
-        backgroundImage: "url('/bg.png')",
-        backgroundRepeat: "repeat-x",
       }}
     >
-      <div className="container">
+      <div className="container" style={{ background: "white" }}>
         <div className="layout-header">
-          <Link to="/">
-            <Image
-              width="120px"
-              src="/pixels-logo.svg"
-              alt="Pixels Logo"
-              preview={false}
-            />
-          </Link>
-          <Space size="large">
+          <Space
+            size="large"
+            style={{
+              display: "flex",
+              gap: 32,
+              justifyContent: "space-between",
+              width: "100%",
+            }}
+          >
+            <Link to="/" style={{ flexGrow: 1 }}>
+              <Image width="48px" src={logo2} alt="logo" preview={false} />
+            </Link>
             {menuItems.map(({ key, name, label, icon, route }) => {
               const isSelected = key === selectedKey;
               return (
@@ -57,8 +59,6 @@ export const Layout = ({ children }) => {
                 </li>
               );
             })}
-          </Space>
-          <Space>
             <Button
               type="primary"
               danger
@@ -67,6 +67,7 @@ export const Layout = ({ children }) => {
               }}
               icon={<LogoutOutlined />}
               title="Logout"
+              style={{ marginLeft: "auto" }}
             />
           </Space>
         </div>
