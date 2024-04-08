@@ -1,4 +1,4 @@
-import { EditButton } from "@refinedev/antd";
+import { DeleteButton, EditButton } from "@refinedev/antd";
 import { useNavigation, useResource, useShow } from "@refinedev/core";
 
 import {
@@ -67,6 +67,7 @@ export const CalendarShowPage = () => {
             <Text.Text>{data?.data.title}</Text.Text>
           </div>
           <div style={{ display: "flex", gap: "4px" }}>
+            <DeleteButton hideText style={{ borderColor: "transparent" }} />
             <EditButton icon={<EditOutlined />} hideText type="text" />
             <Button
               icon={<CloseOutlined />}
