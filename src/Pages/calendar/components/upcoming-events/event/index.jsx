@@ -11,11 +11,11 @@ import styles from "../index.module.css";
 export const CalendarUpcomingEvent = ({ item }) => {
   const { show } = useNavigation();
   const { id, title, start, end } = item;
-  const isToday = dayjs.utc(start).isSame(dayjs.utc(), "day");
-  const isTomorrow = dayjs.utc(start).isSame(dayjs.utc().add(1, "day"), "day");
+  const isToday = dayjs(start).isSame(dayjs(), "day");
+  const isTomorrow = dayjs(start).isSame(dayjs().add(1, "day"), "day");
   const isAllDayEvent =
-    dayjs.utc(start).startOf("day").isSame(start) &&
-    dayjs.utc(end).endOf("day").isSame(end);
+    dayjs(start).startOf("day").isSame(start) &&
+    dayjs(end).endOf("day").isSame(end);
 
   const renderDate = () => {
     if (isToday) {
@@ -46,7 +46,7 @@ export const CalendarUpcomingEvent = ({ item }) => {
       className={styles.item}
     >
       <div className={styles.date}>
-        <Badge color={color} className={styles.badge} />
+        <Badge className={styles.badge} />
         <Text.Text>{`${renderDate()}, ${renderTime()}`}</Text.Text>
       </div>
       <Text.Text className={styles.title}>{title}</Text.Text>

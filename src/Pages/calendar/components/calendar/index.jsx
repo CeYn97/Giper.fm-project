@@ -42,7 +42,7 @@ export const Calendar = ({ categoryId, onClickEvent }) => {
       },
     ],
     meta: {
-      select: "*, events(*)",
+      select: "*, event_types(title)",
     },
   });
 
@@ -53,7 +53,7 @@ export const Calendar = ({ categoryId, onClickEvent }) => {
       description: description,
       start: start,
       end: end,
-      allDay: dayjs(end).utc().diff(dayjs(start).utc(), "hours") >= 23,
+      allDay: dayjs(end).diff(dayjs(start), "hours") >= 23,
     })
   );
 

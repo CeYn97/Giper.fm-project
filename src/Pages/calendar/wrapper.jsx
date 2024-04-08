@@ -26,7 +26,7 @@ export const CalendarPageWrapper = ({ children }) => {
         </Col>
         <Col xs={24} xl={18}>
           <Calendar
-            onClickEvent={({ id }) => {
+            onClickEvent={(id) => {
               show("events", id);
             }}
             categoryId={selectedEventCategory}

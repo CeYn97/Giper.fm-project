@@ -15,7 +15,8 @@ export const CalendarCreatePage = () => {
   const { formProps, saveButtonProps, form, onFinish } = useForm();
 
   const handleOnFinish = async (values) => {
-    const { rangeDate, date, time, color, ...otherValues } = values;
+    const { event_types, rangeDate, date, time, color, ...otherValues } =
+      values;
 
     let start = dayjs();
     let end = dayjs();
@@ -37,9 +38,9 @@ export const CalendarCreatePage = () => {
 
     await onFinish({
       ...otherValues,
+      event_type_id: event_types.id,
       start: start.toISOString(),
       end: end.toISOString(),
-      color: typeof color === "object" ? `#${color.toHex()}` : color,
     });
   };
 
