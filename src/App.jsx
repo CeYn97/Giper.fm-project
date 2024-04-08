@@ -10,8 +10,7 @@ import authProvider from "./Providers/authProvider";
 import { ThemedSiderV2, useNotificationProvider } from "@refinedev/antd";
 
 import { ConfigProvider, App as AntdApp } from "antd";
-import { ThemedLayoutV2, ThemedTitleV2 } from "@refinedev/antd";
-
+import { Layout } from "./layout";
 import { Employees } from "./Pages/employess/list";
 import { ShowEmployee } from "./Pages/employess/show";
 import { ListOrders } from "./Pages/orders/list";
@@ -25,10 +24,10 @@ import logo2 from "./assets/logo2.svg";
 import "antd/dist/reset.css";
 import { ProductList } from "./Pages/products/list";
 
-import korzinaIcon from './assets/korzina.svg'
-import podarokIcon from './assets/podarok.svg'
-import sotrudIcon from './assets/sotrud.svg'
-import calendarIcon from './assets/calendar.svg'
+import korzinaIcon from "./assets/korzina.svg";
+import podarokIcon from "./assets/podarok.svg";
+import sotrudIcon from "./assets/sotrud.svg";
+import calendarIcon from "./assets/calendar.svg";
 
 export default function App() {
   return (
@@ -46,20 +45,27 @@ export default function App() {
                 name: "Employees",
                 list: "/Employess",
                 show: "/Employess/:id",
-                meta: { label: "Сотрудники", icon: <img src={sotrudIcon}
-                style={{height:16}}/> },
+                meta: {
+                  label: "Сотрудники",
+                  icon: <img src={sotrudIcon} style={{ height: 16 }} />,
+                },
               },
               {
                 name: "products",
                 list: "/products",
                 show: "/products/:id",
-                meta: { label: "Продукты", icon: <img src={korzinaIcon} style={{ height: 16 }} /> },
+                meta: {
+                  label: "Продукты",
+                  icon: <img src={korzinaIcon} style={{ height: 16 }} />,
+                },
               },
               {
                 name: "orders",
                 list: "/orders",
-                meta: { label: "Заказы" , icon: <img src={podarokIcon}
-                style={{ height: 16}}/>},
+                meta: {
+                  label: "Заказы",
+                  icon: <img src={podarokIcon} style={{ height: 16 }} />,
+                },
               },
               {
                 name: "events",
@@ -67,8 +73,10 @@ export default function App() {
                 show: "/calendar/show/:id",
                 create: "calendar/create",
                 edit: "/calendar/edit/:id",
-                meta: { label: "События", icon: <img src={calendarIcon}
-                style={{height:16}}/>},
+                meta: {
+                  label: "События",
+                  icon: <img src={calendarIcon} style={{ height: 16 }} />,
+                },
               },
             ]}
             options={{ liveMode: "auto" }}
@@ -83,27 +91,9 @@ export default function App() {
                     key="authenticated-routes"
                     redirectOnFail="/login"
                   >
-                    <ThemedLayoutV2
-                      Title={() => <ThemedTitleV2 text="Giper.fm" />}
-                      Sider={() => (
-                        <ThemedSiderV2
-                          Title={() => (
-                            <img src={logo2} className="sider_logo" />
-                          )}
-                          render={({ items, logout }) => {
-                            return (
-                              <>
-                                <div>My Custom Element</div>
-                                {items}
-                                {logout}
-                              </>
-                            );
-                          }}
-                        />
-                      )}
-                    >
+                    <Layout>
                       <Outlet />
-                    </ThemedLayoutV2>
+                    </Layout>
                   </Authenticated>
                 }
               >

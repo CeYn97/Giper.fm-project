@@ -72,6 +72,7 @@
 }
 
 .ant-page-header-heading-title {
+  font-style: normal;
   font-family: "OpenSans" !important;
   font-weight: bold;
   font-size: 25px;
@@ -107,9 +108,132 @@
 .ant-pagination-item {
   background-color: #e7ff00 !important;
 }
-.ant-tooltip{
-    background-color: #e7ff00 !important;
+
+/* ----- */
+
+.ant-layout-content {
+  max-width: 1020px;
+  margin: 0 auto;
+  width: 80vw;
 }
-.anticon svg {
-  color: black;
+
+.ant-menu-inline,
+.ant-menu-vertical,
+.ant-menu-vertical-left {
+  border-right: 0px;
+}
+
+.ant-form-item-label > label {
+  font-weight: bold;
+}
+
+.ant-page-header {
+  border-radius: 6px;
+}
+
+.ant-menu-submenu-popup > .ant-menu {
+  background-color: #2a132e;
+}
+
+.ant-menu-tree-arrow {
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  width: 10px;
+  color: #fff;
+  transform: translateY(-50%);
+  transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.ant-menu-tree-arrow::before,
+.ant-menu-tree-arrow::after {
+  position: absolute;
+  width: 6px;
+  height: 1.5px;
+  background-color: currentcolor;
+  border-radius: 2px;
+  transition: background 0.3s cubic-bezier(0.645, 0.045, 0.355, 1),
+    transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1),
+    top 0.3s cubic-bezier(0.645, 0.045, 0.355, 1),
+    color 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  content: "";
+}
+
+.ant-menu-tree-arrow::before {
+  transform: rotate(45deg) translateY(-2.5px);
+}
+
+.ant-menu-tree-arrow::after {
+  transform: rotate(-45deg) translateY(2.5px);
+}
+
+.container {
+  margin: 20px auto 30px;
+  max-width: 1020px;
+  width: 80vw;
+  padding: 0px 16px;
+}
+
+.layout-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px 0px;
+}
+
+@media screen and (max-width: 600px) {
+  .layout-header a {
+    flex: 100%;
+    text-align: center;
+  }
+}
+
+li {
+  list-style: none;
+}
+
+.dot-icon {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #96969e;
+  margin-right: 6px;
+}
+
+.nav-button {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  color: #96969e;
+  transition: all 0.3s;
+}
+
+.nav-button:hover {
+  color: #3ecf8e;
+}
+
+.nav-button:hover .dot-icon {
+  background-color: #3ecf8e;
+}
+
+.nav-button.active {
+  color: #242436;
+}
+
+.nav-button.active .dot-icon {
+  background-color: #3ecf8e;
+}
+
+.spin-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 400px;
+}
+
+::selection {
+  background-color: #3ecf8e;
+  color: #fff;
 }
