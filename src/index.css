@@ -1,0 +1,110 @@
+@import url(https://fonts.googleapis.com/css?family=OpenSans);
+
+.ant-layout {
+  background-image: url(./Pages/images/Slide3.png) !important;
+}
+.ant-layout > div > div > div:first-of-type {
+  color: white !important;
+  align-self: flex-start;
+}
+
+.ant-typography {
+  color: black !important;
+}
+
+.ant-card {
+  background-color: white !important;
+  opacity: 1;
+}
+
+.ant-btn {
+  background-color: #e7ff00 !important;
+}
+
+.ant-input {
+  background-color: white !important;
+  opacity: 1;
+}
+/* . {
+  color: black !important;
+} */
+
+.ant-input-outlined {
+  border-color: black !important;
+}
+
+.ant-btn {
+  color: black !important;
+}
+
+.ant-card-bordered {
+  max-width: 45vw !important;
+}
+
+.ant-menu-title-content {
+  background-color: #e7ff00 !important;
+  opacity: 5;
+}
+
+.ant-menu-item {
+  background-color: #e7ff00 !important;
+  opacity: 5;
+}
+
+.ant-menu-light {
+  background-color: black !important;
+  opacity: 1;
+}
+
+.ant-space-item {
+  font-family: "OpenSans" !important;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.ant-layout-has-sider {
+  background-color: black !important;
+  opacity: 1;
+}
+
+.ant-layout-sider-children {
+  background-color: black;
+}
+
+.ant-page-header-heading-title {
+  font-style: italic;
+  font-family: "OpenSans" !important;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.ant-menu-title-content {
+  font-family: "OpenSans" !important;
+  font-weight: bold;
+  font-size: 15px;
+}
+.ant-table-cell {
+  background-color: whitesmoke !important;
+  border-color: black !important;
+  opacity: 0, 5 !important;
+}
+
+.sider_logo {
+  height: 42px;
+  text-align: center;
+  background-color: black;
+}
+
+.ant-layout-sider-children > div:first-of-type {
+  background-color: black !important;
+  text-align: center !important;
+  display: flex !important;
+  justify-content: center !important;
+  padding-top: 16px !important;
+}
+.ant-pagination-item-link {
+  color: #e7ff00 !important;
+}
+.ant-pagination-item {
+  background-color: #e7ff00 !important;
+}

@@ -7,7 +7,8 @@
     "dev": "refine dev",
     "build": "refine build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "serve": "refine serve"
+    "serve": "refine serve",
+    "refine": "refine"
   },
   "dependencies": {
     "@refinedev/antd": "^5.37.6",

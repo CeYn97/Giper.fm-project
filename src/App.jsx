@@ -7,7 +7,7 @@ import { supabaseClient } from "./Providers/suparbaseClient";
 import { dataProvider } from "@refinedev/supabase";
 import authProvider from "./Providers/authProvider";
 // import { liveProvider } from "@refinedev/supabase";
-import { useNotificationProvider } from "@refinedev/antd";
+import { ThemedSiderV2, useNotificationProvider } from "@refinedev/antd";
 
 import { ConfigProvider, App as AntdApp } from "antd";
 import { ThemedLayoutV2, ThemedTitleV2 } from "@refinedev/antd";
@@ -15,8 +15,9 @@ import { ThemedLayoutV2, ThemedTitleV2 } from "@refinedev/antd";
 import { Employees } from "./Pages/employess/list";
 import { ShowEmployee } from "./Pages/employess/show";
 import { ListOrders } from "./Pages/orders/list";
-import { Login } from "./Pages/Login";
+import { LoginPage } from "./Pages/Login";
 
+import logo2 from "./assets/logo2.svg";
 import "antd/dist/reset.css";
 import { ProductList } from "./Pages/products/list";
 
@@ -64,6 +65,22 @@ export default function App() {
                   >
                     <ThemedLayoutV2
                       Title={() => <ThemedTitleV2 text="Giper.fm" />}
+                      Sider={() => (
+                        <ThemedSiderV2
+                          Title={() => (
+                            <img src={logo2} className="sider_logo" />
+                          )}
+                          render={({ items, logout }) => {
+                            return (
+                              <>
+                                <div>My Custom Element</div>
+                                {items}
+                                {logout}
+                              </>
+                            );
+                          }}
+                        />
+                      )}
                     >
                       <Outlet />
                     </ThemedLayoutV2>
@@ -93,7 +110,7 @@ export default function App() {
                   </Authenticated>
                 }
               >
-                <Route path="/login" element={<Login />} />
+                <Route path="/login" element={<LoginPage />} />
               </Route>
             </Routes>
           </Refine>
