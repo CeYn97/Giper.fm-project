@@ -13,8 +13,6 @@
 
 ### Второстепенное участие
 - Матвеев Егор (Creative manager)
-
-###  
 - Хитров Даниил (Demo. Designer)
 - Ширяев Антон (Demo. Designer)
 
