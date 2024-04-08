@@ -28,6 +28,7 @@ import { ProductList } from "./Pages/products/list";
 import korzinaIcon from './assets/korzina.svg'
 import podarokIcon from './assets/podarok.svg'
 import sotrudIcon from './assets/sotrud.svg'
+import calendarIcon from './assets/calendar.svg'
 
 export default function App() {
   return (
@@ -66,7 +67,8 @@ export default function App() {
                 show: "/calendar/show/:id",
                 create: "calendar/create",
                 edit: "/calendar/edit/:id",
-                meta: { label: "События" },
+                meta: { label: "События", icon: <img src={calendarIcon}
+                style={{height:16}}/>},
               },
             ]}
             options={{ liveMode: "auto" }}
