@@ -29,8 +29,8 @@ export const CalendarShowPage = () => {
 
   const { title, description, start, end, event_type_id } = data?.data ?? {};
 
-  const utcStartDate = dayjs(start).utc();
-  const utcEndDate = dayjs(end).utc();
+  const utcStartDate = dayjs(start);
+  const utcEndDate = dayjs(end);
 
   // if the event is more than one day, don't show the time
   let allDay = false;
