@@ -1,4 +1,4 @@
-import { EditButton } from "@refinedev/antd";
+import { DeleteButton, EditButton } from "@refinedev/antd";
 import { useNavigation, useResource, useShow } from "@refinedev/core";
 
 import {
@@ -29,8 +29,8 @@ export const CalendarShowPage = () => {
 
   const { title, description, start, end, event_type_id } = data?.data ?? {};
 
-  const utcStartDate = dayjs(start).utc();
-  const utcEndDate = dayjs(end).utc();
+  const utcStartDate = dayjs(start);
+  const utcEndDate = dayjs(end);
 
   // if the event is more than one day, don't show the time
   let allDay = false;
@@ -67,6 +67,7 @@ export const CalendarShowPage = () => {
             <Text.Text>{data?.data.title}</Text.Text>
           </div>
           <div style={{ display: "flex", gap: "4px" }}>
+            <DeleteButton hideText style={{ borderColor: "transparent" }} />
             <EditButton icon={<EditOutlined />} hideText type="text" />
             <Button
               icon={<CloseOutlined />}

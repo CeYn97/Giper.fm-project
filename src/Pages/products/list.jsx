@@ -1,5 +1,5 @@
 import { useSimpleList, CreateButton } from "@refinedev/antd";
-import { Flex, Card } from "antd";
+import { Flex, Card, Image } from "antd";
 import { List } from "@refinedev/antd";
 import { useGetIdentity } from "@refinedev/core";
 import { useCreate } from "@refinedev/core";
@@ -26,7 +26,14 @@ export const ProductList = () => {
             <Card
               key={product.id}
               style={{ width: 300 }}
-              cover={<img alt={product.title} src={product.image} />}
+              cover={
+                <Image
+                  alt={product.title}
+                  src={product.image}
+                  width={300}
+                  height={300}
+                />
+              }
               actions={[
                 <CreateButton
                   icon={false}

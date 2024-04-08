@@ -76,7 +76,7 @@ export const CalendarUpcomingEvents = ({
       {
         field: "start",
         operator: "gte",
-        value: dayjs().format("DD-MM-YYYY"),
+        value: dayjs().format("YYYY-MM-DD"),
       },
     ],
     meta: {

@@ -21,7 +21,7 @@ const FullCalendarWrapper = ({
         meridiem: false,
       }}
       eventClick={({ event }) => {
-        onClickEvent?.events.find(({ id }) => id === event.id);
+        onClickEvent(event.id);
       }}
       datesSet={({ view }) => {
         setTitle(view.title);

@@ -27,8 +27,8 @@ export const CalendarEditPage = () => {
   useEffect(() => {
     const start = queryResult?.data?.data.start;
     const end = queryResult?.data?.data.end;
-    const utcStartDate = dayjs(start).utc();
-    const utcEndDate = dayjs(end).utc();
+    const utcStartDate = dayjs(start);
+    const utcEndDate = dayjs(end);
 
     form.setFieldsValue({
       categoryId: queryResult?.data?.data.event_types.id,
@@ -52,23 +52,23 @@ export const CalendarEditPage = () => {
   }, [queryResult?.data]);
 
   const handleOnFinish = async (values) => {
-    const { rangeDate, date, time, color, ...otherValues } = values;
+    const { event_types, rangeDate, date, time, ...otherValues } = values;
 
     let start = dayjs();
     let end = dayjs();
 
     if (rangeDate) {
-      start = rangeDate[0].utc().startOf("day");
-      end = rangeDate[1].utc().endOf("day");
+      start = rangeDate[0].startOf("day");
+      end = rangeDate[1].endOf("day");
     } else {
       start = date
-        .utc()
+
         .set("hour", time[0].hour())
         .set("minute", time[0].minute())
         .set("second", 0);
 
       end = date
-        .utc()
+
         .set("hour", time[1].hour())
         .set("minute", time[1].minute())
         .set("second", 0);
@@ -76,9 +76,9 @@ export const CalendarEditPage = () => {
 
     await onFinish({
       ...otherValues,
+      event_type_id: event_types.id,
       start: start.toISOString(),
       end: end.toISOString(),
-      color: typeof color === "object" ? `#${color.toHex()}` : color,
     });
   };
 
