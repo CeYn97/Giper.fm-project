@@ -45,11 +45,11 @@ export const CalendarForm = ({
       >
         <Input />
       </Form.Item>
-      <Form.Item label="Описание" name="description" rules={[{}]}>
+      <Form.Item label="Описание" name="description" rules={[]}>
         <Input.TextArea />
       </Form.Item>
       <Form.Item
-        label="Date & Time"
+        label="Дата & Время"
         rules={[
           {
             required: true,
@@ -69,7 +69,7 @@ export const CalendarForm = ({
               checked={isAllDayEvent}
               onChange={(e) => setIsAllDayEvent(e.target.checked)}
             >
-              All Day
+              Весь день
             </Checkbox>
           </div>
 
@@ -141,7 +141,7 @@ export const CalendarForm = ({
         <Col span={12}>
           <Form.Item
             label="Тип события"
-            name={["event_types"]}
+            name={["event_types", "id"]}
             rules={[
               {
                 required: true,

@@ -26,8 +26,6 @@ import { ProductList } from "./Pages/products/list";
 
 import React from "react";
 
-import { blue } from "@ant-design/colors";
-
 export default function App() {
   return (
     <BrowserRouter>
@@ -101,19 +99,19 @@ export default function App() {
                 <Route path="/orders">
                   <Route index element={<ListOrders />} />
                 </Route>
-              </Route>
-              <Route
-                path="/calendar"
-                element={
-                  <CalendarPageWrapper>
-                    <Outlet />
-                  </CalendarPageWrapper>
-                }
-              >
-                <Route index element={null} />
-                <Route path="show/:id" element={<CalendarShowPage />} />
-                <Route path="edit/:id" element={<CalendarEditPage />} />
-                <Route path="create" element={<CalendarCreatePage />} />
+                <Route
+                  path="/calendar"
+                  element={
+                    <CalendarPageWrapper>
+                      <Outlet />
+                    </CalendarPageWrapper>
+                  }
+                >
+                  <Route index element={null} />
+                  <Route path="show/:id" element={<CalendarShowPage />} />
+                  <Route path="edit/:id" element={<CalendarEditPage />} />
+                  <Route path="create" element={<CalendarCreatePage />} />
+                </Route>
               </Route>
               <Route
                 element={

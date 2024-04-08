@@ -26,7 +26,7 @@ export const CalendarEditPage = () => {
 
   useEffect(() => {
     const start = queryResult?.data?.data.start;
-    const endDate = queryResult?.data?.data.end;
+    const end = queryResult?.data?.data.end;
     const utcStartDate = dayjs(start).utc();
     const utcEndDate = dayjs(end).utc();
 
@@ -37,6 +37,7 @@ export const CalendarEditPage = () => {
       // ),
     });
 
+    // if more than 24 hours, set as all day event
     if (utcEndDate.diff(utcStartDate, "hours") >= 23) {
       setIsAllDayEvent(true);
       form.setFieldsValue({
@@ -83,7 +84,7 @@ export const CalendarEditPage = () => {
 
   return (
     <Modal
-      title="Редактировать событие"
+      title="Редактирование события"
       open
       onCancel={() => {
         list("events");
@@ -91,7 +92,7 @@ export const CalendarEditPage = () => {
       okButtonProps={{
         ...saveButtonProps,
       }}
-      okText="Сохранение"
+      okText="Сохранить"
       width={560}
     >
       <CalendarForm

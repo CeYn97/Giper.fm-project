@@ -31,7 +31,7 @@ export const CalendarUpcomingEvent = ({ item }) => {
 
   const renderTime = () => {
     if (isAllDayEvent) {
-      return "Целый день";
+      return "Весь день";
     }
 
     return `${dayjs(start).format("HH:mm")} - ${dayjs(end).format("HH:mm")}`;

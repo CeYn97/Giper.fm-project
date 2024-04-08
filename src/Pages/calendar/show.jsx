@@ -139,7 +139,7 @@ export const CalendarShowPage = () => {
                 <UserTag key={participant.id} user={participant} />
               ))}
             </Space>
-            </div> */}
+          </div> */}
           <div style={{ display: "flex", alignItems: "start" }}>
             <InfoCircleOutlined
               style={{

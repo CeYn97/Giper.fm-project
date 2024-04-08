@@ -3,7 +3,6 @@ import React, { lazy, Suspense, useEffect, useRef, useState } from "react";
 import { useList } from "@refinedev/core";
 
 import { LeftOutlined, RightOutlined } from "@ant-design/icons";
-
 import { Button, Card, Grid, Radio } from "antd";
 import dayjs from "dayjs";
 
@@ -37,7 +36,7 @@ export const Calendar = ({ categoryId, onClickEvent }) => {
     },
     filters: [
       {
-        field: "events_types.id",
+        field: "event_types.id",
         operator: "in",
         value: categoryId?.length ? categoryId : undefined,
       },
@@ -47,15 +46,16 @@ export const Calendar = ({ categoryId, onClickEvent }) => {
     },
   });
 
-  const events = (data?.data ?? []).map(({ id, title, start, end }) => ({
-    id: id,
-    title: title,
-    description: description,
-    start: start,
-    end: end,
-    color: color,
-    allDay: dayjs(end).utc().diff(dayjs(start).utc(), "hours") >= 23,
-  }));
+  const events = (data?.data ?? []).map(
+    ({ id, title, description, start, end }) => ({
+      id: id,
+      title: title,
+      description: description,
+      start: start,
+      end: end,
+      allDay: dayjs(end).utc().diff(dayjs(start).utc(), "hours") >= 23,
+    })
+  );
 
   return (
     <Card>
