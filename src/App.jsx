@@ -16,6 +16,10 @@ import { Employees } from "./Pages/employess/list";
 import { ShowEmployee } from "./Pages/employess/show";
 import { ListOrders } from "./Pages/orders/list";
 import { LoginPage } from "./Pages/Login";
+import { CalendarCreatePage } from "./Pages/calendar";
+import { CalendarShowPage } from "./Pages/calendar";
+import { CalendarEditPage } from "./Pages/calendar";
+import { CalendarPageWrapper } from "./Pages/calendar";
 
 import logo2 from "./assets/logo2.svg";
 import "antd/dist/reset.css";
@@ -49,6 +53,14 @@ export default function App() {
                 name: "orders",
                 list: "/orders",
                 meta: { label: "Заказы" },
+              },
+              {
+                name: "events",
+                list: "/calendar",
+                show: "/calendar/show/:id",
+                create: "calendar/create",
+                edit: "/calendar/edit/:id",
+                meta: { label: "События" },
               },
             ]}
             options={{ liveMode: "auto" }}
@@ -101,6 +113,19 @@ export default function App() {
                 </Route>
                 <Route path="/orders">
                   <Route index element={<ListOrders />} />
+                </Route>
+                <Route
+                  path="/calendar"
+                  element={
+                    <CalendarPageWrapper>
+                      <Outlet />
+                    </CalendarPageWrapper>
+                  }
+                >
+                  <Route index element={null} />
+                  <Route path="show/:id" element={<CalendarShowPage />} />
+                  <Route path="edit/:id" element={<CalendarEditPage />} />
+                  <Route path="create" element={<CalendarCreatePage />} />
                 </Route>
               </Route>
               <Route
