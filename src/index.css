@@ -108,3 +108,6 @@
 .ant-pagination-item {
   background-color: #e7ff00 !important;
 }
+.anticon svg {
+  color: black;
+}
