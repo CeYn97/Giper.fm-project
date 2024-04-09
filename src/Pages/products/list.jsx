@@ -25,7 +25,7 @@ export const ProductList = () => {
           return (
             <Card
               key={product.id}
-              style={{ width: 300 }}
+              style={{ width: 300, marginBottom: "20px" }}
               cover={
                 <Image
                   alt={product.title}

@@ -3,14 +3,22 @@
 .ant-layout {
   background-image: url(./Pages/images/Slide3.png) !important;
 }
+
 .ant-layout > div > div > div:first-of-type {
   color: white !important;
   align-self: flex-start;
 }
 
-.ant-typography {
-  color: #ffffff !important;
+h4.ant-typography {
+  color: #9f6ff2 !important;
+  padding-left: 30px;
   font-size: 35px !important;
+}
+
+h3.ant-typography {
+  color: #000000 !important;
+  font-size: 37px !important;
+  padding: 10px;
 }
 
 .ant-card {
@@ -108,6 +116,11 @@
 }
 .ant-pagination-item {
   background-color: #e7ff00 !important;
+  border: #e7ff00 !important;
+}
+
+.ant-table-wrapper {
+  opacity: 0.9 !important;
 }
 
 /* ----- */
@@ -216,11 +229,15 @@ li {
 }
 
 .nav-button:hover {
-  color: #E7FF00
+  color: #000;
+  background-color: #9f6ff2;
+  border-radius: 10px;
+  padding: 7px;
+  /* text-decoration: underline !important; */
 }
 
-.nav-button:hover .dot-icon {
-  background-color: #E7FF00;
+.nav-button .nav-button:hover .dot-icon {
+  background-color: #e7ff00;
 }
 
 .nav-button.active {
@@ -228,7 +245,7 @@ li {
 }
 
 .nav-button.active .dot-icon {
-  background-color: #E7FF00;
+  background-color: #e7ff00;
 }
 
 .spin-wrapper {
@@ -239,11 +256,64 @@ li {
 }
 
 ::selection {
-  background-color: #E7FF00;
+  background-color: #e7ff00;
   color: #fff;
 }
 .nav-button {
   padding-left: -30px;
   margin-top: 70px;
   color: #e7ff00;
+}
+
+.fc-event {
+  background-color: #e7ff00 !important;
+  border: #e7ff00 !important;
+}
+
+.fc-h-event .fc-event-main {
+  color: #000 !important;
+}
+
+.fc-col-header-cell-cushion {
+  color: #000000 !important;
+}
+
+.fc-list-day-text {
+  color: #000000 !important;
+}
+
+.fc-list-day-side-text {
+  color: #000000 !important;
+}
+
+:where(.css-dev-only-do-not-override-1kuana8) a {
+  color: #9f6ff2;
+}
+
+.ant-card {
+  opacity: 0.9 !important;
+}
+
+:root {
+  --fc-event-border-color: #9f6ff2;
+}
+
+:root {
+  --fc-event-border-color: #9f6ff2;
+}
+
+:where(.css-dev-only-do-not-override-1kuana8).ant-pagination
+  .ant-pagination-item-active
+  a {
+  color: #000000;
+}
+
+:where(.css-dev-only-do-not-override-1kuana8).ant-pagination
+  .ant-pagination-item-active
+  a:hover {
+  color: #9f6ff2;
+}
+
+.element.style {
+  color: #9f6ff2 !important;
 }

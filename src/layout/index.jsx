@@ -26,7 +26,10 @@ export const Layout = ({ children }) => {
         minHeight: "100vh",
       }}
     >
-      <div className="container" style={{ background: "white" }}>
+      <div
+        className="container"
+        style={{ background: "white", opacity: "0.9" }}
+      >
         <div className="layout-header">
           <Space
             size="large"
@@ -51,6 +54,10 @@ export const Layout = ({ children }) => {
                     }`}
                     style={{
                       fontWeight: isSelected ? "bold" : "normal",
+                      color: "black",
+                      textDecoration: isSelected ? "underline" : "none",
+                      textDecorationColor: "#242436",
+                      textUnderlineOffset: "5px",
                     }}
                   >
                     {icon}

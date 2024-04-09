@@ -48,7 +48,7 @@ export const Employees = () => {
             </FilterDropdown>
           )}
         />
-        <Table.Column dataIndex="points" title="Волюта" />
+        <Table.Column dataIndex="points" title="Валюта" />
 
         <Table.Column
           title="Действия"

@@ -15,7 +15,11 @@ export const CalendarPageWrapper = ({ children }) => {
     <div className="page-container">
       <Row gutter={[32, 32]}>
         <Col xs={24} xl={6}>
-          <CreateButton block size="large" style={{ marginBottom: "1rem" }}>
+          <CreateButton
+            block
+            size="large"
+            style={{ marginBottom: "1rem", marginTop: "40px" }}
+          >
             Новое событие
           </CreateButton>
 

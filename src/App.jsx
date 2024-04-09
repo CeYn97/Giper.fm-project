@@ -47,7 +47,12 @@ export default function App() {
                 show: "/Employess/:id",
                 meta: {
                   label: "Сотрудники",
-                  icon: <img src={sotrudIcon} style={{ height: 16 }} />,
+                  icon: (
+                    <img
+                      src={sotrudIcon}
+                      style={{ height: 16, color: "red" }}
+                    />
+                  ),
                 },
               },
               {

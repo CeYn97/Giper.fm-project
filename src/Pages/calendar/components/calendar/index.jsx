@@ -78,7 +78,7 @@ export const Calendar = ({ categoryId, onClickEvent }) => {
           <Text.Text>{title}</Text.Text>
         </div>
 
-        <Radio.Group value={calendarView}>
+        <Radio.Group className="Radio.GR" value={calendarView}>
           {[
             {
               label: "Месяц",

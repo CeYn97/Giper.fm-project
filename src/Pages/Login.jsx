@@ -2,24 +2,6 @@ import React from "react";
 import { AuthPage } from "@refinedev/antd";
 import logo from "../assets/logo.svg";
 
-// import LoginPage
-
-// export const Login = () => {
-//   return (
-//     <div>
-//       <AuthPage
-//         type="login"
-//         formProps={{
-//           initialValues: {
-//             email: "emp3@giper.fm",
-//             password: "emp3pass",
-//           },
-//         }}
-//       />
-//     </div>
-//   );
-// };
-
 import {
   useLink,
   useRouterType,
@@ -225,7 +207,7 @@ export const LoginPage = ({
             {forgotPasswordLink ?? (
               <ActiveLink
                 style={{
-                  color: token.colorPrimaryTextHover,
+                  color: "#9f6ff2",
                   fontSize: "12px",
                   marginLeft: "auto",
                 }}
@@ -266,7 +248,7 @@ export const LoginPage = ({
               to="/register"
               style={{
                 fontWeight: "bold",
-                color: token.colorPrimaryTextHover,
+                color: "#9f6ff2",
               }}
             >
               {translate("pages.login.signup", "Зарегестрироваться")}
